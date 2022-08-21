@@ -1,0 +1,19 @@
+body{
+    box-sizing: border-box;
+}
+.cal-container{
+    border: solid 2px #dbdbdb;
+    border-radius: 1rem;
+    width: 30rem;
+    margin: 5rem auto;
+}
+.cal-container h4{
+    margin: 0;
+    padding: .5rem 0 .5rem 2rem;
+    border-bottom: solid 1px #dbdbdb;
+}
+.cal-container input{
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}

@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+}
+h2{
+    margin: 0;
+}
+.services{
+    border: 5px solid black;
+    height: 300px;
+    display: grid;
+    /* grid-template-columns: repeat(3, 33.3%); */
+    /* grid-template-columns: 50% repeat(2, 25%);
+    grid-template-rows: repeat(2, 50%); */
+    grid: repeat(2, 50%) / 50% repeat(2, 25%);
+}
+.service{
+    text-align: center;
+    color: white;
+}
+.service-1{
+    background: darkviolet;
+    grid-column: 1 / span 4;
+}
+.service-2{
+    background: limegreen;
+}
+.service-3{
+    background: teal;
+}

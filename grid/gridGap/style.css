@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+}
+h2{
+    margin: 0;
+}
+.services{
+    border: 5px solid black;
+    height: 300px;
+
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+    grid-gap: 1rem;
+}
+.service{
+    text-align: center;
+    color: white;
+}
+.service-1{
+    background: darkviolet;
+}
+.service-2{
+    background: limegreen;
+}
+.service-3{
+    background: teal;
+}

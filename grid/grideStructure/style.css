@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+}
+.container{
+    width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid: 100px auto / 25% 75% ;
+    grid-template-areas: 
+    "header header"
+    "sidenav main ";
+    grid-gap: 1rem;
+}
+.image{
+    max-width: 100%;
+    grid-area: 2 / 1 / 2 / 2;
+
+}
+.site-title{
+    grid-area: header;
+    text-align: center;
+    grid-area: 1 / 1 / 2 / 3;
+}
+.description{
+    grid-area: 2 / 2 / 2 / 3 ;
+}

@@ -1,0 +1,249 @@
+:root {
+    --mainFont:  'Lato', sans-serif; 
+    --primary: rgb(255, 90, 95);
+    --dark: #484848;
+    --light: #ffffff;
+}
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--mainFont);
+    margin: 0;
+}
+img{
+    max-width: 100%;
+}
+.header{
+    background-image: url('./img/bg.jpg');
+    background-position: bottom center ;
+    background-size: cover;
+    height: 100vh;
+}
+.header .navbar{
+    display: flex;
+    padding: 1rem 0;
+}
+.header nav{
+    display: flex;
+}
+.header a{
+    color:  white;
+    text-decoration: none;
+    text-align: center;
+    flex: 1;
+    font-size: .9rem;
+    padding-bottom: 2rem;
+}
+.header a:hover{
+    border-bottom: 1px solid white;
+}
+form{
+    width: 95%;
+    margin: 0 auto;
+    background: white;
+    border-radius: .5rem;
+    padding: 2rem;
+}
+form h1{
+    font-size: 1.6rem;
+}
+.form-content{
+    display: flex;
+    flex-direction: column;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+}
+input[placeholder], input[type='datetime-local']{
+    padding: .5rem 0 .5rem 1rem;
+    margin: .5rem 0 1rem 0;
+    border: 1px solid #dbdbdb ;
+}
+.submit{
+    text-align: right;
+}
+input[type='submit']{
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+.width{
+    width: 95%;
+    margin: 2rem auto;
+}
+.remendation-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.recomend{
+    color: white;
+    height: 300px;
+    flex: 0 0 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.recomend div{
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+.recomend div h1{
+    margin-bottom: .7rem; 
+    font-size: 1.4rem;
+}
+.recomend-card1{
+    background-image: url('./img/recommended1.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+.recomend-card2{
+    background-image: url('./img/recommended2.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+.recomend-card3{
+    background-image: url('./img/recommended3.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+.recomend-card5{
+    background-image: url('./img/recommended5.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+.recomend-card4{
+    background-image: url('./img/recommended4.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+.footer{
+    background: white;
+    border-top: 1px solid #dbdbdb;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+}
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+.footerBtn{
+    position: fixed;
+    bottom: 0;
+    background: white;
+    right: 0;
+    color: black;
+    padding: 1rem;
+    text-decoration: none;
+}
+.hidden{
+    display: none;
+}
+.explore img{
+    width: 100%;
+} 
+.trip img{
+    width: 100%;
+} 
+
+@media(min-width: 768px){
+    .header .navbar{
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+    .header .navbar div{
+        flex: 2;
+    }
+    .header nav{
+        flex: 1;
+        display: flex;
+    }
+    form{
+        width: 35%;
+        margin: 3rem 0 0 10rem;
+        background: white;
+        border-radius: .5rem;
+        padding: 2rem;
+    }
+    .form-content{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .field{
+        flex: 0 0 100%;
+    }
+    .checks{
+        flex: 0 0 calc(50% - .3rem);
+    }
+    form h1{
+        font-size: 2.2rem;
+    }
+    input[placeholder], input[type='datetime-local']{
+        padding: 1rem 0 1rem 1rem;
+    }
+    .submit{
+        width: 100%;
+    }
+    .width{
+        width: 80%;
+        margin: 2rem auto;
+    }
+    .recomend{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+    .explore{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+
+}
+@media(min-width: 500px){
+    .recomend{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .explore{
+        flex: 0 0 calc(50% - 1rem);
+    }  
+    .trip{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    
+}
+@media(min-width: 980px){
+    .recomend{
+        flex: 0 0 calc(25% - 1rem);
+    }
+    .explore{
+        flex: 0 0 calc(33.3% - 1rem);
+    } 
+    .trip{
+        flex: 0 0 calc(33.3% - 1rem);
+    }   
+}
+@media(min-width: 1295px){
+    .recomend{
+        flex: 0 0 calc(20% - 1rem);
+    }
+    .explore{
+        flex: 0 0 calc(25% - 1rem);
+    } 
+}

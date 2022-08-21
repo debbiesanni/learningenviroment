@@ -1,0 +1,35 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+}
+h2{
+    margin: 0;
+}
+header{
+    background: #CDDC39;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+.container{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.content{
+    flex: 1;
+    background: #B3DFD8;
+    padding: 1rem 2rem;
+}
+.footer{
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1rem;
+    background: #212121;
+    color: white;
+}

@@ -1,0 +1,221 @@
+:root{
+    --secondary: #008fd1;
+    --primary: #db008d;
+    --gray: #f2f2f2;
+    --white: white;
+}
+body{
+    font-family: 'Libre Baskerville', serif;
+}
+li{
+    list-style: none;
+}
+ul{
+    padding: 0;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+h2{
+    text-align: center;
+}
+.bgColor{
+    background: var(--secondary);
+}
+.generalWidth{
+    width: 80%;
+    margin: 0 auto;
+}
+.position{
+    position: relative;
+}
+.header{
+    width: 100%;
+    position: absolute;
+    top: 1rem;
+}
+.hero{
+    background-image: url('./img/hero.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.blog-header{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.4rem;
+    margin-left: 1rem;
+}
+.navbar ul{
+    display: flex;
+    flex-direction: column;
+}
+.text h1{
+    color: var(--secondary);
+    text-transform: uppercase;
+    width: 40rem;
+    font-size: 3rem;
+}
+.card-container{
+    background: white;
+    margin-bottom: 2rem;
+}
+.card-holder-container{
+    background: var(--gray);
+    padding: 2rem 0;
+}
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.text-container{
+    text-transform: uppercase;
+    padding: 1.5rem;
+    text-align: center;
+}
+.title{
+    margin-top: 0;
+}
+.text-container span:last-of-type{
+    color: var(--primary);
+    margin-left: 5px;
+}
+.button{
+    background: var(--secondary);
+    color: var(--white);
+    text-decoration: none;
+    padding: .5rem 1.5rem;
+    margin-top: 1rem;
+    display: inline-block;
+}
+.categories ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.categories ul li a{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+.categories ul li a i{
+    font-size: 3rem;
+    margin-bottom: .5rem;
+    display: inline-block;
+}
+.categories ul li{
+    padding: 2rem 0;
+    flex: 0 0 50%;
+}
+.categories ul li{
+    background: #008fd1;
+}
+.categories ul li:nth-child(2){
+    background: #db008d;
+}
+.categories ul li:nth-child(3){
+    background: #9800d1;
+}
+.categories ul li:nth-child(4){
+    background: #eca300;
+}
+.footer-container{
+    background: var(--secondary);
+    color: white;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+}
+.contacts div{
+    flex: 0 0 calc(33.3% - 1rem);
+}
+.contacts div:nth-child(1){
+    line-height: 1.5rem;
+}
+.contacts div:nth-child(2) ul li a{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+.contacts div:nth-child(2) ul li a:hover{
+    text-decoration: underline;
+}
+.contacts span{
+    display: none;
+}
+.contacts nav a{
+    color: white;
+    font-size: 1.9rem;
+    margin-left: 1rem;
+}
+.contacts nav a::before{
+    font-family: "Font Awesome 5 Brands";
+}
+.contacts nav a[href*='facebook.com']::before{
+    content: "\f39e";
+}
+.contacts nav a[href*='twitter.com']::before{
+    content: "\f099";
+}
+.contacts nav a[href*='youtube.com']::before{
+    content: "\f431";
+}
+.contacts nav a[href*='instagram.com']::before{
+    content: "\f16d";
+}
+.contacts nav a[href*='pinterest.com']::before{
+    content: "\f231";
+}
+.copy-right{
+    background: #004d70;
+    text-align: center;
+    padding: 2rem 0;
+}
+@media(min-width: 500px){
+    .flex-container{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .card-container{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .categories ul li{
+        padding: 2rem 0;
+        flex: 0 0 25%;
+    }
+}
+@media(min-width: 768px){
+    .blog-header{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar ul{
+        flex-direction: row;
+    }
+    .card-container{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+    .contacts{
+        flex-direction: row;
+    }
+    .contacts nav{
+        text-align: right;
+    }
+}

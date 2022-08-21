@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+}
+h2{
+    margin: 0;
+}
+.services{
+    border: 5px solid black;
+    height: 300px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 30%);
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+    align-items: baseline;
+}
+.service{
+    text-align: center;
+    color: white;
+}
+.service-1{
+    background: darkviolet;
+}
+.service-2{
+    background: limegreen;
+}
+.service-3{
+    background: teal;
+}

@@ -1,0 +1,106 @@
+@mixin box-sizing($box-modal){
+    box-sizing: $box-modal;
+}
+@mixin backgroundImage($image){
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/#{$image});
+    background-size: cover;
+    background-position: top center;
+    height: 89vh;
+}
+@mixin viewMore{  
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: solid 1px darken($gray, 4%);
+    text-align: center;
+    color: $primary;
+}
+@mixin phone {
+    @media(min-width: #{$phone}){
+        @content;
+    }
+}
+@mixin tablet {
+    @media(min-width: #{$tablet}){
+        @content;
+    }
+}
+@mixin desktop {
+    @media(min-width: #{$desktop}){
+        @content;
+    }
+}
+@mixin reduced1290 {
+    @media(max-width: '1296px'){
+        @content;
+    }
+}
+@mixin reduced1040 {
+    @media(max-width: '1040px'){
+        @content;
+    }
+}
+@mixin reduced1100 {
+    @media(max-width: '1100px'){
+        @content;
+    }
+}
+@mixin reduced880 {
+    @media(max-width: '880px'){
+        @content;
+    }
+}
+@mixin reduced550 {
+    @media(max-width: '550px'){
+        @content;
+    }
+}
+@mixin reduced580 {
+    @media(max-width: '580px'){
+        @content;
+    }
+}
+@mixin reduced480 {
+    @media(max-width: '480px'){
+        @content;
+    }
+}
+
+
+@mixin  searchInput($border-radius, $pl){
+    width: 100%;
+    padding: .7rem 0 .7rem $pl;
+    border-radius: $border-radius;
+    border: solid 1px darken($gray, 3%);
+    &:focus{
+        outline: none;
+    }
+}
+@mixin searchIcon{
+    position: absolute;
+    top: .8rem;
+    right: 1rem;
+    cursor: pointer;
+}
+@mixin button($padding) {
+    background: $primary;
+    color: $white;
+    padding: $padding;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: background 0.5s ease-in-out;
+    &:hover {
+      background: darken($primary, 10%);
+      outline: none;
+    }
+}
+@mixin sliderArrow{
+    display: block;
+    position: absolute;
+    bottom: 6rem;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}

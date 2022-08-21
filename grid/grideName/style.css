@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+}
+.container{
+    border: 5px solid black;
+    width: 900px;
+    margin: 0 auto;
+    height: 100vh;
+    display: grid;
+    grid: 100px auto 100px / repeat(4, 1fr);
+    grid-template-areas: 
+    "header header header header"
+    "main main main sidenav"
+    "footer footer footer footer";
+    grid-gap: 1rem;
+}
+h1{
+    margin: 0;
+}
+.header{
+    background: coral;
+    color: white;
+    text-align: center;
+    grid-area: header;
+}
+.main-content{
+    background: darkred;
+    grid-area: main;
+}
+.sidebar{
+    background: olive;
+    grid-area: sidenav;
+}
+.footer{
+    background: navy;
+    grid-area: footer;
+}

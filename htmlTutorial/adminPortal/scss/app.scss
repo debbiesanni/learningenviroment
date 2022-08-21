@@ -1,0 +1,230 @@
+@import 'variables';
+@import 'mixins';
+
+html{
+    @include box-sizing(border-box);
+    height: 100%;
+}
+*,
+*::after,
+*::before{
+    @include box-sizing(inherit)
+}
+body{
+    margin: 0;
+    font-family: $mainFont;
+    height: 100%;
+}
+li{
+    list-style: none;
+}
+.hide{
+    display: none;
+}
+.desktop{
+    display: none;
+    @include tablet{
+        display: block;
+    }
+}
+.mobile{
+    @include tablet{
+        display: none;
+    }
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.header-container{
+    display: flex;
+    align-items: center;
+    background: $primary;
+    h1{
+        flex: 0 0 5rem;
+        background: $secondary;
+        color: $white;
+        margin: 0;
+        padding: 1.2rem 1rem;
+        font-size: 2.5rem;
+        @include tablet{flex: 0 0 20rem;}
+    }
+    .nav-links{
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+        padding: 0 0 0 1rem;
+        .nav-menu{
+            display: flex;
+            div{
+                padding: 2rem 1rem 2rem 0;
+                &:hover{
+                    background: $secondary;
+                }
+            }
+            a{
+                color: $white;
+                text-decoration: none;
+                margin-left: 2rem;
+                font-weight: 400;
+                i{
+                    margin-right: .5rem;
+                }
+                span{
+                    margin-left: .5rem;
+                    border-radius: 50%;
+                    background: $green;
+                    padding: .3rem .4rem .4rem .4rem;
+                }
+            }
+        }
+    }
+}
+.body-content{
+    display: flex;
+    flex: 1;
+    .sidenav{
+        flex: 0 0 20rem;
+        background: $black;
+        color: $white;
+        padding: 1rem 2rem;
+        .welcome-note{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-right: 2rem;
+            img{
+                width: 80px;
+                height: 80px;
+            }
+            p{
+                margin-left: 3rem;
+                font-size: 1rem;
+                font-weight: bold;
+                span{
+                    font-weight: normal;
+                    display: block;
+                }
+            }
+        }
+        .sidenav-input{
+            text-align: center;
+            margin-top: 1rem;
+            input{
+                height: 3rem;
+                width: 100%;
+                border-radius: .5rem;
+                padding-left: 1rem;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        h3{
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .sidenav-menu{
+            margin: 2rem 0 0 0;
+            a{
+                color: $white;
+                text-decoration: none;
+                margin-bottom: 1rem;
+                display: inline-block;
+                padding: .5rem;
+                position: relative;
+                transition: padding-left .5s ease-in-out, background-color .5s ease-in-out;
+                i{
+                    margin-right: .5rem;
+                }
+            }
+            ul {
+                li{
+                    &:hover .dropdown{
+                        display: block;
+                        background: $dark;
+                        padding: 1rem;
+                        li{
+                            padding: .5rem 0;
+                            cursor: pointer;
+                            width: 70%;
+                            transition: padding-left .5s ease-in-out, background-color .5s ease-in-out;
+                            &:hover{
+                                background: $primary;
+                                padding-left: 3rem;
+                            }
+                        }
+                    }
+                    &:hover a{
+                        background: $primary;
+                        padding-left: 3rem;
+                    }
+                }
+            }
+            .hidden{
+                display: none;
+            }
+        }
+    }
+    .form-container{
+        flex: 1;
+        background: $cream;
+        h1{
+            text-align: center;
+        }
+        form{
+            padding: .5rem 2rem;
+            .input-fields{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                @include tablet{
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                .field{
+                    flex: 0 0 100%;
+                    margin-bottom: 2rem;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    @include tablet{
+                        flex: 0 0 calc(50% - 1rem);
+                    }
+                    &.expand{
+                        flex: 0 0 100%;
+                    }
+                    label{
+                        flex: 0 0 120px;
+                        font-size: large;
+                    }
+                    input[type='text'], textarea{
+                        flex: 1;
+                        border: none;
+                        height: 2.1rem;
+                        border-radius: .2rem;
+                    
+                    }
+                    textarea{
+                        height: 9rem;
+                    }
+                }
+                .submit{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    input[type='submit']{
+                        background: $primary;
+                        color: $white;
+                        padding: 1rem;
+                        
+                    }
+                } 
+            }
+
+        }
+    }
+}

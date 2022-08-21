@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header-container">
+            <h1><span class="desktop">AminFlex</span><span class="mobile">AF</span></h1>
+            <div class="nav-links">
+                <div class="toggleBtn">
+                    <i class="fas fa-arrow-left"></i>
+                    <i class="fas fa-arrow-right hide"></i>
+                </div>
+                <div class="nav-menu">
+                    <div>
+                        <a href="#">
+                            <i class="fas fa-comment-alt"></i>
+                            Message
+                            <span>20</span>                            
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fas fa-bell"></i>
+                            Alert
+                            <span>20</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="body-content">
+            <aside class="sidenav">
+                <div class="welcome-note">
+                    <img src="./img/user.svg" alt="person icon"/>
+                    <p>Welcome: <span>Admin<span></p>                    
+                </div>
+                <div class="sidenav-input">
+                    <input type="text" placeholder="search..."/>
+                </div>
+                <h3>Admin Menu</h3>
+                <div class="sidenav-menu">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-address-book"></i>Clients</a>
+                            <ul class="dropdown hidden">
+                                <li>Add New</li>
+                                <li>View All</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-chart-line"></i>Sales</a>
+                            <ul class="dropdown hidden">
+                                <li>Add New</li>
+                                <li>View All</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-box"></i>Products</a>
+                            <ul class="dropdown hidden">
+                                <li>Add New</li>
+                                <li>View All</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-file-alt"></i>Invoices</a>
+                            <ul class="dropdown hidden">
+                                <li>Add New</li>
+                                <li>View All</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-calendar-alt"></i>Calendar</a>
+                            <ul class="dropdown hidden">
+                                <li>Add New</li>
+                                <li>View All</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-pencil-alt"></i>Edit Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="form-container">
+                <h1>Add New Client</h1>
+                <form>
+                    <div class="input-fields">
+                        <div class="field">
+                            <label>First Name</label>
+                            <input type="text" />
+                        </div>
+                        <div class="field">
+                            <label>Last Name</label>
+                            <input type="text" />
+                        </div>
+                        <div class="field">
+                            <label>Company</label>
+                            <input type="text" />
+                        </div>
+                        <div class="field">
+                            <label>Address</label>
+                            <input type="text" />
+                        </div>
+                        <div class="field expand">
+                            <label>Additional Note</label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="field expand">
+                            <label>Membership: </label>
+                            <input type="radio" value="Basic"/>
+                            <label for='Basic'>Basic</label>
+                            <input type="radio" value="Premium"/>
+                            <label for='Premium'>Premium</label>
+                            <input type="radio" value="Gold"/>
+                            <label for='Gold'>Gold</label>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Add Client"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>

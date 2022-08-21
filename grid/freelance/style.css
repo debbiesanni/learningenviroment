@@ -1,0 +1,96 @@
+:root {
+    --mainFont: 'Staatliches', cursive;
+    --primary: #f1a94e;
+    --secondary: #44b3c2;
+    --light: #ffffff;
+}
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--mainFont);
+    margin: 0;
+}
+.width{
+    padding: 0 2rem;
+}
+.bgImage{
+    background-image: url('./img/bg.jpg');
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg-content{
+    color: white;
+    text-align: center;
+}
+.bg-content h1{
+    margin-top: 0;
+    font-size: 3.1rem;
+}
+.media{
+    text-align: center;
+    margin: 2rem 0 4rem 0;
+}
+.media h1{
+    margin-bottom: .9rem;
+    font-size: 2.5rem;
+}
+.media i{
+    text-align: center;
+    color: var(--secondary);
+    font-size: 3rem;
+    margin: 2rem 0 1rem 0;
+}
+.borderBottom{
+    border-bottom: 8px solid var(--primary);
+    width: 30%;
+    margin: 0 auto;
+}
+.media div{
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+.footer{
+    background-image: url('./img/contact.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 350px;
+    margin-top: 4rem;
+    color: white;
+}
+.footer-container h1{
+    padding: 3.5rem 0 1.5rem 0;
+}
+.footer-container p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-container div{
+    flex: 1;
+}
+@media(min-width: 768px){
+    .media-container{
+        display: flex;
+        margin-top: 3rem;
+        justify-content: space-between;
+    }
+    .media{
+        flex: 0 0 calc(33.3% - 3rem);
+    }
+    .width{
+        width: 73%;
+        margin: 0 auto;
+        padding: 0;
+    }
+}

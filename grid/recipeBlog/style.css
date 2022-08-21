@@ -1,0 +1,156 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul{
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+li{
+    
+    list-style: none;
+    flex: 1;
+    text-align: center;
+    padding: 1rem 0;
+    transition: background .5s ease-in-out;
+}
+li:hover{
+    background: #c9c84a;
+}
+img{
+    max-width: 100%;
+}
+blockquote{
+    font-style: italic;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.width{
+    width: 90%;
+    margin: 0 auto;
+}
+.header{
+    padding:  3rem 0;
+}
+.nav{
+    background: black;
+    margin-bottom: 3rem;
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.main-content{
+    display: grid;
+    grid: repeat(7, auto) / 100%;
+    grid-template-areas: "header" "main" "sideLeft" "right" "image" ;
+}
+.title{
+    text-align: center;
+    grid-area: header ;
+    margin-top: 2rem;
+}
+.sideLeft{
+    background: #c9c84a;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    grid-area: sideLeft;
+}
+.sideLeft span{
+    display: block;
+    padding-bottom: 3rem;
+    font-size: 1.2rem;
+}
+.sideLeft span:last-of-type{
+    padding-bottom: 0px;
+}
+.mini1{
+    grid-area: right ;
+}
+.mini1 img {
+    margin-top: 1rem;
+}
+.mini2{
+    grid-area: image ;
+}
+.mini2 img{
+    margin-top: 1rem;
+}
+.mini1, .mini2{
+    text-align: center;
+}
+.content{
+    grid-area: main;
+}
+.footer{
+    margin-top: 2rem;
+}
+.footer .container{
+    background: #c9c84a;
+}
+.footer-link{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 2rem 0;
+}
+.widget{
+    flex: 1;
+    text-align: center;
+    padding: 1rem 0;
+}
+.widget nav{
+    display: flex;
+    flex-direction: column;
+}
+.widget a{
+    text-decoration: none;
+    color: #525252;
+    font-size: 1.1rem;
+    margin-bottom: .3rem;
+    text-transform: uppercase;
+}
+.copyright{
+    margin: 0;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+@media(min-width: 768px){
+    ul{
+        flex-direction: row;
+    }
+    .width{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .main-content{
+        grid: repeat(3, auto) / repeat(4, 1fr);
+        grid-template-areas: "header header header header" "sideLeft main main image" "right main main image" ;
+        grid-gap: 1rem;
+    }
+    .mini2{
+        align-self: center;
+    }
+    .mini1{
+        align-self: flex-end;
+    }
+    .sideLeft{
+        align-self: flex-start;
+    } 
+    .footer-link{
+        flex-direction: row;
+    }
+}

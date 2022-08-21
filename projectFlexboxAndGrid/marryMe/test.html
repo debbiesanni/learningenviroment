@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./test.css">
+</head>
+<body>
+    <div id="floatContainer" class="float-container">
+        <label for="floatField">content</label>
+        <input id="floatField" type="text">
+    </div>
+    <script>
+        console.log('yes')
+        const floatField = document.getElementById('floatField');
+        const floatContainer = document.getElementById('floatContainer');
+        floatField.addEventListener('focus', () => {
+        floatContainer.classList.add('active');
+        });
+        floatField.addEventListener('blur', () => {
+        floatContainer.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
